@@ -17,5 +17,5 @@ apt-get install libafflib-dev afflib-tools libewf-dev ewf-tools -y --force-yes
 
 # Clone and compile Sleuthkit
 cd /tmp || exit
-git clone -o 5f8a005475c3ea3e6547c3276aea381e9804c005 https://github.com/sleuthkit/sleuthkit.git
-cd sleuthkit && ./bootstrap && ./configure && make && make install && ldconfig
+git clone https://github.com/sleuthkit/sleuthkit.git && cd sleuthkit && git checkout 5f8a005475c3ea3e6547c3276aea381e9804c005
+./bootstrap && ./configure && make && make install && ldconfig
